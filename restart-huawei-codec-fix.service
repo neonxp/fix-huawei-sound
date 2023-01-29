@@ -1,0 +1,10 @@
+[Unit]
+Description=Restart huawei codec fix after resume
+After=suspend.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/systemctl --no-block restart huawei-codec-fix.service
+
+[Install]
+WantedBy=suspend.target
